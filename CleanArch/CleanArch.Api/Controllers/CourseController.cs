@@ -12,7 +12,6 @@ namespace CleanArch.Api.Controllers
     [ApiController]
     public class CourseController : ControllerBase
     {
-
         private readonly ICourseService _courseService;
 
         public CourseController(ICourseService courseService)
@@ -33,6 +32,5 @@ namespace CleanArch.Api.Controllers
         {
             return Ok();
         }
-
     }
 }

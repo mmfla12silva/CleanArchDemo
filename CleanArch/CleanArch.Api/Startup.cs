@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CleanArch.Api.Configurations;
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.IoC;
 using MediatR;
@@ -48,8 +47,6 @@ namespace CleanArch.Api
 
             services.AddMediatR(typeof(Startup));
 
-            services.RegisterAutoMapper();
-
             RegisterServices(services);
         }
 
@@ -74,6 +71,7 @@ namespace CleanArch.Api
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "University Api V1");
                 }
             );
+
             app.UseMvc();
         }
 
